@@ -181,9 +181,19 @@ const MarginControl = withState( {
         //     { label: 'Small', value: '25%' },
         // ] }
         options={ style_options_b4(['m','mt','mr','mb','ml','mx','my'],6,1) }
-        onChange={ ( size ) => { setState( { size } ) } }
+        onChange={
+			( size ) => {
+				setState( { size } ),
+				registro( size )
+			}
+		}
     />
 ) );
+// Prueba, mostrar cambio en dom.
+	function registro(valor = null){
+		console.log('registro:' + valor );
+		// return valor;
+	}
 
 const PaddingControl = withState( {
     size: 'p-0',
@@ -199,7 +209,6 @@ const PaddingControl = withState( {
 /**
  * Agregar control de clases con un select para display
  * 1) Display, aplica en bloques
- * 2) Vertical align, aplica en row de columns.
  * 2) Vertical align, aplica en row de columns.
  */
 const DisplayControl = withState( {
@@ -317,7 +326,7 @@ const PluginSidebarMoreMenuItemTest = () => (
 
 			<PanelBody
 				title={__('Layout Utilities', 'lang')}
-				initialOpen={ true }
+				initialOpen={ false }
 			>
 				<PanelRow>
 					<DisplayControl/>
@@ -448,3 +457,4 @@ function options_to_select_b4(prefix,values){
 	// console.log(display);
 	return display;
 }
+

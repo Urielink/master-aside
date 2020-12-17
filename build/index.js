@@ -601,10 +601,16 @@ var MarginControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_10__["wit
     onChange: function onChange(size) {
       setState({
         size: size
-      });
+      }), registro(size);
     }
   });
-});
+}); // Prueba, mostrar cambio en dom.
+
+function registro() {
+  var valor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  console.log('registro:' + valor); // return valor;
+}
+
 var PaddingControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_10__["withState"])({
   size: 'p-0'
 })(function (_ref3) {
@@ -624,7 +630,6 @@ var PaddingControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_10__["wi
 /**
  * Agregar control de clases con un select para display
  * 1) Display, aplica en bloques
- * 2) Vertical align, aplica en row de columns.
  * 2) Vertical align, aplica en row de columns.
  */
 
@@ -728,7 +733,7 @@ var PluginSidebarMoreMenuItemTest = function PluginSidebarMoreMenuItemTest() {
     initialOpen: false
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(MarginControl, null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(PaddingControl, null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(MarginBox, null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(PaddingBox, null))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelBody"], {
     title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Layout Utilities', 'lang'),
-    initialOpen: true
+    initialOpen: false
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(DisplayControl, null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(AlgnVerControl, null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(AlgnHorControl, null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(ColWidthControl, null)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelRow"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(ColOffsetControl, null)))));
 };
 
