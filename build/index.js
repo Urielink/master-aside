@@ -852,6 +852,21 @@ function options_to_select_b4(prefix, values) {
 
   return display;
 }
+/**
+ * Trabajo con filtros
+ * @param {*} className 
+ * @param {*} blockName 
+ */
+// // Our filter function
+// function setBlockCustomClassName( className, blockName ) {
+//     return blockName === 'core/code' ? className + ' text-success' : className;
+// }
+// // Adding the filter
+// wp.hooks.addFilter(
+// 	'blocks.getBlockDefaultClassName',
+//     'my-plugin/set-block-custom-class-name',
+//     setBlockCustomClassName
+// );
 
 /***/ }),
 
